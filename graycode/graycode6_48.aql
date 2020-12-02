@@ -1,0 +1,11 @@
+
+param M;
+statement S1;
+
+S1 := { t : 1 <= t, t <= 5 (%) 
+  #CNOT(t, t-1)
+};
+
+
+//codegen { S1  } with { M=5 } apply { plutomin };
+codegen { S1  } with { M=5 } apply { hlt4qra };
